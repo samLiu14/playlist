@@ -1,0 +1,11 @@
+body {
+  background-color: #141b1c;
+  color: white;
+}
+
+.inputFields {
+  display: flex;
+  justify-content: space-evenly; 
+}
+
+.songDisplay {}

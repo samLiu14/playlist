@@ -3,18 +3,15 @@ let artistList = [];
 let imgList = [];
 let linkList = [];
 let timeList = [];
+let counter = -1;
 
-// for (let img of imgList) {
-//   $(".imgDisplay").append(img + ",");
-// }
-
-// for (let link of linkList) {
-//   $(".linkDisplay").append(link + ",");
-// }
-
-// for (let time of timeList) {
-//   $(".timeDisplay").append(time + ",");
-// }
+function printer(a) {
+  $(".imgDisplay").append(`<td><img src="${imgList[a]}"></td>`);
+  $(".nameDisplay").append(`<td>${nameList[a]}</td>`);
+  $(".artistDisplay").append(`<td>${artistList[a]}</td>`);
+  $(".lengthDisplay").append(`<td>${timeList[a]}</td>`);
+  $(".linkDisplay").append(`<td><a href="${linkList[a]}">link</a></td>`);
+}
 
 $("button").click(function() {
   let nameSmth = $(".nameInput").val();
@@ -27,21 +24,9 @@ $("button").click(function() {
   imgList.push(imgSmth);
   linkList.push(linkSmth);
   timeList.push(timeSmth);
-  for (let name of nameList) {
-    $(".nameDisplay").append("<tr>" + "<td>" + name + "</td>");
-  }
-  for (let artist of artistList) {
-    $(".artistDisplay").append("<td>" + artist + "</td");
-  }
-  for (let img of imgList) {
-    $(".imgDisplay").append();
-  }
-  for (let link of linkList) {
-    $(".linkDisplay").append();
-  }
-  for (let time of timeList) {
-    $(".timeDisplay").append("<td>" + name + "</td>" + "</tr>");
-  }
+  counter++;
+  // $(".nameDisplay").append(counter);
+  printer(counter);
 });
 
 // use bob, bobby, bobert, bobara, and bobamantha to test everything out

@@ -8,4 +8,28 @@ body {
   justify-content: space-evenly; 
 }
 
-.songDisplay {}
+img {
+  width: 150px;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: #b2cccf;
+}
+
+table, th, td {
+  border: 2px solid white;
+  padding: 40px;
+  border-bottom: 1px solid white;
+}
+
+th {
+  font-size: 50px;
+}
+
+td {
+  font-size: 30px;
+}
